@@ -2,8 +2,8 @@
 
 namespace ServerPilot\Command;
 
-use ServerPilot\Model\Server;
 use ServerPilot\Base\BaseCommand;
+use ServerPilot\Model\Server;
 
 /**
  * An extension of the base command object for server-related operations.
@@ -70,8 +70,8 @@ class ServersCommand extends BaseCommand
             $this,
             $id,
             array(
-                'firewall'    => (boolean) $firewall,
-                'autoupdates' => (boolean) $autoupdates,
+                'firewall' => (boolean) $firewall,
+                'autoupdates' => (boolean) $autoupdates
             )
         );
     }

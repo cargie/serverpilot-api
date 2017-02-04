@@ -114,6 +114,13 @@ class Ssl extends BaseModel
 
     public function fromData($data = array())
     {
-        dd($data);
+        $this->setAuto($data['auto']);
+        $this->setForce($data['force']);
+        $this->setCsr($data['csr']);
+        $this->setCert($data['cert']);
+        $this->setCacerts($data['cacerts']);
+        $data['id'] = $this->getAppID();
+        
+        return parent::fromData($data);
     }
 }

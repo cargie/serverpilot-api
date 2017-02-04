@@ -67,7 +67,7 @@ class DatabasesCommand extends BaseCommand
             )
         );
     }
-
+    
     /**
      * Updates the database with the specified ID.
      *
@@ -83,7 +83,7 @@ class DatabasesCommand extends BaseCommand
             $this,
             $id,
             array(
-                'user' => (object) $user,
+                'user' => (object) $user
             )
         );
     }

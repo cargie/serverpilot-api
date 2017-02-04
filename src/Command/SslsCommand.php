@@ -92,8 +92,11 @@ class SslsCommand extends BaseCommand
      * @param string $id
      * @return boolean
      */
-    public function delete($id)
+    public function delete($appid)
     {
-        return $this->api()->delete($this);
+        return $this->api()->delete($this, array(
+            (string) $appid,
+            'ssl',
+        ));
     }
 }

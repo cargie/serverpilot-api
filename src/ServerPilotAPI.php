@@ -357,10 +357,13 @@ class ServerPilotAPI
         // Initialise:
         
         $this->init(self::HTTP_METHOD_GET);
+        
         // Issue GET Request:
+        
         $this->curl->get($this->url($command, $params), $data);
         
         // Handle Response:
+        
         return $this->handle($command);
     }
     
@@ -381,8 +384,9 @@ class ServerPilotAPI
         // Remove Object from Cache:
         
         $this->decache($command, $params);
-        dd($this->url($command, $params));
+        
         // Issue POST Request:
+        
         $this->curl->post($this->url($command, $params), $this->encode($data));
         
         // Handle Response:
@@ -670,6 +674,7 @@ class ServerPilotAPI
     private function url(BaseCommand $command, $params = array())
     {
         // Define URL Segments:
+        
         $segments = array(
             rtrim(self::$endpoint, '/'),
             $command->getMethod(),
