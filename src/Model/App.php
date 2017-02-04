@@ -178,7 +178,7 @@ class App extends BaseModel
      * @param string $serverId
      * @return App
      */
-    public function setServerId($serverId)
+    public function setServerID($serverId)
     {
         $this->serverId = (string) $serverId;
         
@@ -190,7 +190,7 @@ class App extends BaseModel
      *
      * @return string
      */
-    public function getServerId()
+    public function getServerID()
     {
         return $this->serverId;
     }
